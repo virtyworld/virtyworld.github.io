@@ -12,7 +12,7 @@
 
 ## 🧰 Навыки и технологии
 
-- C# · Unity · URP · UniTask · Addressables · Vuforia · Google ARCore · ARKit  · 3D графика и анимация
+- C# · Unity · URP · UniTask · Addressables · Vuforia · Google ARCore · ARKit  · 3D графика и анимация · URP · HDRP
 
 ## 🔗 Демо
 
