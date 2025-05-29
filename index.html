@@ -35,7 +35,8 @@
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         .back-button {
-            @apply inline-flex items-center px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200;
+            /* Добавлен 'gap-2' для отступа между элементами и 'inline-flex items-center' уже был для выравнивания */
+            @apply inline-flex items-center gap-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200;
         }
         .section-title {
             @apply text-2xl font-bold text-gray-800 mb-4;
@@ -61,8 +62,8 @@
 
         <div id="project-detail-container" class="hidden">
             <button id="back-to-list-button" class="back-button mb-6">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                <span>Назад ко всем проектам</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                <span class="leading-none">Назад ко всем проектам</span>
             </button>
             <div id="project-detail-content" class="bg-white p-6 rounded-xl shadow-md">
                 </div>
