@@ -9,50 +9,95 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Светло-серый фон */
-            color: #333;
+            background-color: #1a202c; /* Темно-серый фон */
+            color: #e2e8f0; /* Светлый текст */
         }
         /* Пользовательские стили для тегов и активных состояний */
         .tag-button {
             @apply px-3 py-1 text-sm font-medium rounded-full transition-colors duration-200 cursor-pointer;
-            background-color: #e5e7eb; /* Серый фон тега */
-            color: #4b5563; /* Темный текст тега */
-            border: 1px solid #d1d5db; /* Светлая граница */
+            background-color: #2d3748; /* Темно-серый фон тега */
+            color: #a0aec0; /* Светлый текст тега */
+            border: 1px solid #4a5568; /* Темная граница */
         }
         .tag-button:hover {
-            background-color: #d1d5db; /* Светлее при наведении */
+            background-color: #4a5568; /* Светлее при наведении */
         }
         .tag-button.active {
-            background-color: #3b82f6; /* Синий фон для активного тега */
+            background-color: #63b3ed; /* Синий фон для активного тега */
             color: white; /* Белый текст для активного тега */
-            border-color: #2563eb; /* Темно-синяя граница */
+            border-color: #4299e1; /* Темно-синяя граница */
         }
         .project-card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            background-color: #2d3748; /* Темный фон карточки проекта */
+            color: #e2e8f0; /* Светлый текст карточки */
+            border: 1px solid #4a5568; /* Темная граница карточки */
         }
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Более заметная тень для темной темы */
+            border-color: #63b3ed; /* Синяя граница при наведении */
         }
         .back-button {
             /* Добавлен 'gap-2' для отступа между элементами и 'inline-flex items-center' уже был для выравнивания */
-            @apply inline-flex items-center gap-2 whitespace-nowrap px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200;            
+            @apply inline-flex items-center gap-2 whitespace-nowrap px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200; /* Более темный синий для кнопки */
         }
         .section-title {
-            @apply text-2xl font-bold text-gray-800 mb-4;
+            @apply text-2xl font-bold text-gray-200 mb-4; /* Светлый заголовок секции */
+        }
+
+        /* Общие стили для темной темы */
+        .header-title {
+            color: #edf2f7; /* Светлый цвет для заголовка шапки */
+        }
+        .header-subtitle {
+            color: #a0aec0; /* Светлый цвет для подзаголовка шапки */
+        }
+        .main-content-bg {
+            background-color: #1a202c; /* Темный фон для основного контента */
+        }
+        .tag-filter-bg {
+            background-color: #2d3748; /* Темный фон для контейнера фильтра тегов */
+        }
+        .tag-filter-title {
+            color: #e2e8f0; /* Светлый текст для заголовка фильтра */
+        }
+        .project-detail-content-bg {
+            background-color: #2d3748; /* Темный фон для детальной информации о проекте */
+        }
+        .project-detail-title {
+            color: #edf2f7; /* Светлый заголовок детальной информации */
+        }
+        .project-detail-text {
+            color: #a0aec0; /* Светлый текст детальной информации */
+        }
+        .project-detail-link {
+            color: #63b3ed; /* Синий для ссылок */
+        }
+        .skill-tag {
+            background-color: #553c9a; /* Темно-пурпурный для тегов навыков */
+            color: #edf2f7; /* Светлый текст */
+        }
+        .platform-tag {
+            background-color: #3182ce; /* Темно-синий для тегов платформ */
+            color: #edf2f7; /* Светлый текст */
+        }
+        .genre-tag {
+            background-color: #38a169; /* Темно-зеленый для тегов жанров */
+            color: #edf2f7; /* Светлый текст */
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
 
     <header class="w-full max-w-4xl text-center mb-8">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Мое Портфолио Игр</h1>
-        <p class="text-lg text-gray-600">Коллекция моих проектов по разработке игр и приложений</p>
+        <h1 class="text-4xl font-extrabold header-title mb-2">Мое Портфолио Игр</h1>
+        <p class="text-lg header-subtitle">Коллекция моих проектов по разработке игр и приложений</p>
     </header>
 
-    <main class="w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg">
-        <div id="tag-filter-container" class="mb-6 p-4 bg-gray-50 rounded-lg shadow-inner hidden">
-            <h2 class="text-xl font-semibold text-gray-700 mb-3">Фильтр по тегам:</h2>
+    <main class="w-full max-w-4xl main-content-bg p-6 rounded-xl shadow-lg">
+        <div id="tag-filter-container" class="mb-6 p-4 tag-filter-bg rounded-lg shadow-inner hidden">
+            <h2 class="text-xl font-semibold tag-filter-title mb-3">Фильтр по тегам:</h2>
             <div id="tags-list" class="flex flex-wrap gap-2">
                 </div>
         </div>
@@ -64,14 +109,14 @@
             <button id="back-to-list-button" class="back-button mb-6">
   <span class="flex items-center gap-2">
     <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-         xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
     </svg>
     <span>Назад</span>
   </span>
 </button>
-            <div id="project-detail-content" class="bg-white p-6 rounded-xl shadow-md">
+            <div id="project-detail-content" class="project-detail-content-bg p-6 rounded-xl shadow-md">
                 </div>
         </div>
     </main>
@@ -192,24 +237,24 @@
         function renderProjectList(filteredProjects = projectsData) {
             projectListContainer.innerHTML = ''; // Очищаем контейнер
             if (filteredProjects.length === 0) {
-                projectListContainer.innerHTML = '<p class="text-center text-gray-500 text-lg">Нет проектов, соответствующих выбранным тегам.</p>';
+                projectListContainer.innerHTML = '<p class="text-center text-gray-400 text-lg">Нет проектов, соответствующих выбранным тегам.</p>';
                 return;
             }
 
             filteredProjects.forEach(project => {
                 const projectCard = document.createElement('div');
-                projectCard.className = 'project-card bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:border-blue-300 transform hover:-translate-y-1';
+                projectCard.className = 'project-card p-6 rounded-xl shadow-md border border-gray-700 hover:border-blue-500 transform hover:-translate-y-1';
                 projectCard.dataset.id = project.id;
                 projectCard.dataset.tags = project.tags.join(' '); // Добавляем теги как атрибут данных
 
                 projectCard.innerHTML = `
-                    <h2 class="text-2xl font-bold text-gray-800 mb-2">${project.title}</h2>
-                    <p class="text-gray-600 mb-4">${project.about.split('. ')[0]}.</p>
+                    <h2 class="text-2xl font-bold text-gray-100 mb-2">${project.title}</h2>
+                    <p class="text-gray-400 mb-4">${project.about.split('. ')[0]}.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        ${project.platforms.map(p => `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">${p}</span>`).join('')}
-                        ${project.genre.map(g => `<span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">${g}</span>`).join('')}
+                        ${project.platforms.map(p => `<span class="platform-tag px-2 py-1 text-xs font-medium rounded-full">${p}</span>`).join('')}
+                        ${project.genre.map(g => `<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
                     </div>
-                    <button class="view-details-button mt-auto px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200">
+                    <button class="view-details-button mt-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
                         Подробнее
                     </button>
                 `;
@@ -230,38 +275,38 @@
             const project = projectsData.find(p => p.id === projectId);
 
             if (!project) {
-                projectDetailContent.innerHTML = '<p class="text-red-500">Проект не найден.</p>';
+                projectDetailContent.innerHTML = '<p class="text-red-400">Проект не найден.</p>';
                 return;
             }
 
             projectDetailContent.innerHTML = `
-                <h1 class="text-3xl font-extrabold text-gray-900 mb-4">${project.title}</h1>
+                <h1 class="text-3xl font-extrabold project-detail-title mb-4">${project.title}</h1>
                 <img src="${project.screenshot}" alt="Скриншот проекта ${project.title}" class="w-full h-auto rounded-lg mb-6 shadow-md object-cover">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <div>
-                        <p class="text-gray-700 mb-2"><strong class="font-semibold">Платформы:</strong> ${project.platforms.join(', ')}</p>
-                        <p class="text-700 mb-2"><strong class="font-semibold">Жанр:</strong> ${project.genre.join(', ')}</p>
-                        ${project.setting ? `<p class="text-gray-700 mb-2"><strong class="font-semibold">Сеттинг:</strong> ${project.setting}</p>` : ''}
-                        ${project.audience ? `<p class="text-gray-700 mb-2"><strong class="font-semibold">Аудитория:</strong> ${project.audience}</p>` : ''}
+                        <p class="project-detail-text mb-2"><strong class="font-semibold">Платформы:</strong> ${project.platforms.join(', ')}</p>
+                        <p class="project-detail-text mb-2"><strong class="font-semibold">Жанр:</strong> ${project.genre.join(', ')}</p>
+                        ${project.setting ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Сеттинг:</strong> ${project.setting}</p>` : ''}
+                        ${project.audience ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Аудитория:</strong> ${project.audience}</p>` : ''}
                     </div>
                     <div>
-                        <p class="text-gray-700 mb-2"><strong class="font-semibold">Роль:</strong> ${project.role}</p>
-                        ${project.company ? `<p class="text-gray-700 mb-2"><strong class="font-semibold">Компания:</strong> <a href="https://${project.company}" target="_blank" class="text-blue-500 hover:underline">${project.company}</a></p>` : ''}
+                        <p class="project-detail-text mb-2"><strong class="font-semibold">Роль:</strong> ${project.role}</p>
+                        ${project.company ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Компания:</strong> <a href="https://${project.company}" target="_blank" class="project-detail-link hover:underline">${project.company}</a></p>` : ''}
                     </div>
                 </div>
 
                 <h3 class="section-title">О проекте</h3>
-                <p class="text-gray-800 leading-relaxed mb-6">${project.about}</p>
+                <p class="project-detail-text leading-relaxed mb-6">${project.about}</p>
 
                 <h3 class="section-title">Навыки и технологии</h3>
                 <div class="flex flex-wrap gap-2 mb-6">
-                    ${project.skills.map(skill => `<span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">${skill}</span>`).join('')}
+                    ${project.skills.map(skill => `<span class="skill-tag px-3 py-1 text-sm font-medium rounded-full">${skill}</span>`).join('')}
                 </div>
 
                 ${project.demo ? `
                     <h3 class="section-title">Демо</h3>
-                    <a href="${project.demo}" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition-colors duration-200">
+                    <a href="${project.demo}" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-200">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.117l-4.073-2.348A1 1 0 009 9.652v4.696a1 1 0 001.679.777l4.073-2.348a1 1 0 000-1.554z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Попробовать онлайн
                     </a>
