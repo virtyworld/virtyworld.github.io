@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article>
+    <h1>{{ page.title }}</h1>
+
+    <p><strong>Платформы:</strong> {{ page.platforms }}</p>
+    <p><strong>Жанр:</strong> {{ page.genre }}</p>
+    {% if page.setting %}<p><strong>Сеттинг:</strong> {{ page.setting }}</p>{% endif %}
+    {% if page.audience %}<p><strong>Аудитория:</strong> {{ page.audience }}</p>{% endif %}
+    {% if page.company %}<p><strong>Компания:</strong> <a href="{{ page.company_url }}" target="_blank">{{ page.company }}</a></p>{% endif %}
+    <p><strong>Роль:</strong> {{ page.role }}</p>
+
+    <h2>🎮 О проекте</h2>
+    {{ content }}
+
+    <h2>🧰 Навыки и технологии</h2>
+    <p>{{ page.skills }}</p>
+
+    {% if page.demo_url %}
+    <h2>🔗 Демо</h2>
+    <p><a href="{{ page.demo_url }}" target="_blank">👉 Попробовать онлайн</a></p>
+    {% endif %}
+
+    <div class="tags">
+        <strong>Теги:</strong>
+        {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags.html#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    </div>
+</article>
