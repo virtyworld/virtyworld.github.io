@@ -124,11 +124,25 @@
     <script>
         // Данные о проектах
         const projectsData = [
+            {
+                id: 'overdrive-turbo',
+                title: 'OverDrive Turbo',
+                platforms: [ 'Android', 'iOS'],
+                genre: ['Казуальная', 'Гиперказуальная','Однопользовательская'],
+                setting: 'Настоящее',
+                audience: '9+',
+                role: 'Полная разработка',
+                 about: 'Садитесь за руль и испытайте острые ощущения от гипер-казуальных гонок! Добро пожаловать в динамичную, легкую в освоении гоночную игру, в которой ваша единственная задача - рулить влево и вправо',
+                skills: ['C#', 'Unity'],
+                demo: 'https://play.google.com/store/apps/details?id=com.sevenskillssoft.overdriveturbo',
+                screenshot: '/screenshots/overdrive-turbo/1.jpg', // Placeholder image
+                tags: [ 'android', 'ios', 'casual', 'hyper-casual','c#', 'unity']
+            },
              {
                 id: 'tennis-rush',
                 title: 'Tennis rush',
                 platforms: [ 'Android', 'iOS'],
-                genre: ['Казуальная', 'Однопользовательская'],
+                genre: ['Казуальная', 'Гиперказуальная','Однопользовательская'],
                 setting: 'Настоящее',
                 audience: '9+',
                 role: 'Полная разработка',
@@ -136,7 +150,7 @@
                 skills: ['C#', 'Unity'],
                 demo: 'https://play.google.com/store/apps/details?id=com.SevenSkillsSoftware.TennisRush',
                 screenshot: '/screenshots/tennis-rush/tennisRush.jpg', // Placeholder image
-                tags: [ 'android', 'ios', 'casual', 'c#', 'unity', 'полная-разработка']
+                tags: [ 'android', 'ios', 'casual', 'hyper-casual','c#', 'unity']
             },
              {
                 id: 'clicker',
@@ -146,11 +160,11 @@
                 setting: 'Настоящее',
                 audience: '9+',
                 role: 'Полная разработка',
-                about: 'Этот прототип кликера для Android. Игроку предлагается развивать свой бизнес, улучшая текущий бизнес и покупая новый для получения прибыли. Разработан на Unity с использованием архитектуры ECS (LeoEcs). Такое решение гарантирует чистое разделение логики и данных, делая игру масштабируемой и высокопроизводительной. В результате, новые функции и улучшения интегрируются легко, а разработка и поддержка остаются эффективными.',
+                about: 'Игроку предлагается развивать свой бизнес, улучшая текущий бизнес и покупая новый для получения прибыли. Разработан на Unity с использованием архитектуры ECS (LeoEcs). Такое решение гарантирует чистое разделение логики и данных, делая игру масштабируемой и высокопроизводительной. В результате, новые функции и улучшения интегрируются легко, а разработка и поддержка остаются эффективными.',
                 skills: ['C#', 'Unity', 'URP', 'LeoECSLite'],
                 demo: 'https://github.com/virtyworld/clicker',
                 screenshot: 'https://placehold.co/600x400/ccbbaa/ffffff?text=Кликер', // Placeholder image
-                tags: [ 'android', 'ios', 'windows', 'casual', 'c#', 'unity', 'urp', 'ECS', 'полная-разработка']
+                tags: [ 'android', 'ios', 'windows', 'casual', 'c#', 'unity', 'urp', 'ECS']
             },
             {
                 id: 'mebel-constructor',
@@ -163,20 +177,20 @@
                 skills: ['C#', 'Unity', 'URP', 'UniTask', 'Addressables', 'Vuforia', 'Google ARCore', 'ARKit', '3D графика и анимация', 'HDRP'],
                 demo: 'https://dmitriynr.itch.io/furniture-catalog',
                 screenshot: '/screenshots/Mebel3d/1.png', // Placeholder image
-                tags: ['webgl', 'android', 'ios', 'windows', 'ar', 'конструктор', 'визуализация', 'c#', 'unity', 'urp', 'unitask', 'addressables', 'vuforia', 'google-arcore', 'arkit', '3d-графика', 'анимация', 'hdrp', 'полная-разработка']
+                tags: ['webgl', 'android', 'ios', 'windows', 'ar', 'конструктор', 'визуализация', 'c#', 'unity', 'urp', 'unitask', 'addressables', 'vuforia', 'google-arcore', 'arkit', '3d-графика', 'анимация', 'hdrp']
             },
             {
                 id: 'fantasy-td',
                 title: 'Fantasy TD — 2D Tower Defence',
                 platforms: ['Android', 'PC'],
-                genre: ['Tower Defence'],
+                genre: ['Tower Defence', 'Гиперказуальная', 'Однопользовательская'],
                 setting: 'Фэнтези-средневековье',
                 audience: '9+',
                 role: 'Полная разработка',
                 about: 'Игра в жанре Tower Defence в фэнтезийном мире. Стройте башни, защищайте королевство и сражайтесь с ордами врагов. Использована ECS-архитектура LeoECS.',
                 skills: ['C#', 'Unity', 'LeoECS', '2D графика и анимации'],
                 screenshot: 'https://placehold.co/600x400/ccbbaa/ffffff?text=Fantasy+TD', // Placeholder image
-                tags: ['android', 'pc', 'tower-defence', 'фэнтези-средневековье', 'c#', 'unity', 'leoecs', '2d-графика', 'анимации', 'полная-разработка']
+                tags: ['android', 'pc', 'tower-defence', 'фэнтези-средневековье', 'c#', 'unity', 'leoecs', '2d-графика', 'анимации']
             },
             {
                 id: 'saigl-runner',
@@ -187,9 +201,9 @@
                 audience: '16+',
                 role: 'Полная разработка',
                 about: 'Атмосферный раннер с философским подтекстом. Игроку предстоит выжить в мрачном мире и раскрыть тайну самой жестокой сущности.',
-                skills: ['C#', 'Unity', 'Zenject', 'URP', 'SOLID'],
+                skills: ['C#', 'Unity', 'Zenject', 'URP'],
                 screenshot: 'https://placehold.co/600x400/aaccbb/ffffff?text=Saigl+Runner', // Placeholder image
-                tags: ['android', 'ios', 'runner', 'фэнтези', 'c#', 'unity', 'zenject', 'urp', 'solid', 'полная-разработка']
+                tags: ['android', 'ios', 'runner', 'фэнтези', 'c#', 'unity', 'zenject', 'urp', 'solid'
             },
             {
                 id: 'gofanz',
@@ -333,8 +347,7 @@
                     ${project.skills.map(skill => `<span class="skill-tag px-3 py-1 text-sm font-medium rounded-full">${skill}</span>`).join('')}
                 </div>
 
-                ${project.demo ? `
-                    <h3 class="section-title">Демо</h3>
+                ${project.demo ? `                    
                     <a href="${project.demo}" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-200">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.117l-4.073-2.348A1 1 0 009 9.652v4.696a1 1 0 001.679.777l4.073-2.348a1 1 0 000-1.554z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Попробовать онлайн
