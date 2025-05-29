@@ -96,30 +96,30 @@
     </header>
 
     <main class="w-full max-w-4xl main-content-bg p-6 rounded-xl shadow-lg">
-        <div id="tag-filter-container" class="mb-6 p-4 tag-filter-bg rounded-lg shadow-inner hidden">
-            <h2 class="text-xl font-semibold tag-filter-title mb-3">Фильтр по тегам:</h2>
-            <div id="tags-list" class="flex flex-wrap gap-2">
-                </div>
+    <div id="project-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         </div>
 
-        <div id="project-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div id="tag-filter-container" class="mb-6 p-4 tag-filter-bg rounded-lg shadow-inner hidden">
+        <h2 class="text-xl font-semibold tag-filter-title mb-3">Фильтр по тегам:</h2>
+        <div id="tags-list" class="flex flex-wrap gap-2">
             </div>
+    </div>
 
-        <div id="project-detail-container" class="hidden">
-            <button id="back-to-list-button" class="back-button mb-6">
-  <span class="flex items-center gap-2">
-    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+    <div id="project-detail-container" class="hidden">
+        <button id="back-to-list-button" class="back-button mb-6">
+<span class="flex items-center gap-2">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-    </svg>
-    <span>Назад</span>
-  </span>
+</svg>
+<span>Назад</span>
+</span>
 </button>
-            <div id="project-detail-content" class="project-detail-content-bg p-6 rounded-xl shadow-md">
-                </div>
-        </div>
-    </main>
+        <div id="project-detail-content" class="project-detail-content-bg p-6 rounded-xl shadow-md">
+            </div>
+    </div>
+</main>
 
     <script>
         // Данные о проектах
