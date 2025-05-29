@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+        .project-card {
+            background: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .project-card h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .project-card .tags a {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85em;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .project-card .tags a:hover {
+            background-color: #dae0e5;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ site.title }}</h1>
+    </header>
+    <nav>
+        <a href="{{ site.baseurl }}/">Главная</a>
+        <a href="{{ site.baseurl }}/tags.html">Теги</a>
+        </nav>
+    <div class="container">
+        {{ content }}
+    </div>
+    <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. Все права защищены.</p>
+    </footer>
+</body>
+</html>
