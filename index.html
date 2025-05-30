@@ -96,7 +96,7 @@
     </header>
 
     <main class="w-full max-w-4xl main-content-bg p-6 rounded-xl shadow-lg">
-    <div id="project-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div id="project-list-container" class="grid grid-cols-1 gap-6">
         </div>
 
     <div id="tag-filter-container" class="mb-6 p-4 tag-filter-bg rounded-lg shadow-inner hidden">
@@ -319,16 +319,17 @@
                 projectCard.dataset.tags = project.tags.join(' '); // Добавляем теги как атрибут данных
 
                 projectCard.innerHTML = `
-                    <h2 class="text-2xl font-bold text-gray-100 mb-2">${project.title}</h2>
-                    <p class="text-gray-400 mb-4">${project.about.split('. ')[0]}.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        ${project.platforms.map(p => `<span class="platform-tag px-2 py-1 text-xs font-medium rounded-full">${p}</span>`).join('')}
-                        ${project.genre.map(g => `<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
-                    </div>
-                    <button class="view-details-button mt-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
-                        Подробнее
-                    </button>
-                `;
+    <img src="${project.screenshot}" alt="Скриншот ${project.title}" class="w-full h-48 object-cover rounded-lg mb-4 shadow-md">
+    <h2 class="text-2xl font-bold text-gray-100 mb-2">${project.title}</h2>
+    <p class="text-gray-400 mb-4">${project.about.split('. ')[0]}.</p>
+    <div class="flex flex-wrap gap-2 mb-4">
+        ${project.platforms.map(p => `<span class="platform-tag px-2 py-1 text-xs font-medium rounded-full">${p}</span>`).join('')}
+        ${project.genre.map(g => `<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
+    </div>
+    <button class="view-details-button mt-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
+        Подробнее
+    </button>
+`;
                 projectListContainer.appendChild(projectCard);
             });
 
