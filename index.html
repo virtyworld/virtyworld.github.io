@@ -376,13 +376,14 @@
                         <p class="project-detail-text mb-2"><strong class="font-semibold">Жанр:</strong> ${project.genre.join(', ')}</p>
                         ${project.setting ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Сеттинг:</strong> ${project.setting}</p>` : ''}
                         ${project.audience ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Аудитория:</strong> ${project.audience}</p>` : ''}
-                         ${project.details ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Детали:</strong> ${project.details}</p>` : ''}
-        ${project.status ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Статус:</strong> ${project.status}</p>` : ''}
+                        
     
                     </div>
                     <div>
                         <p class="project-detail-text mb-2"><strong class="font-semibold">Роль:</strong> ${project.role}</p>
                         ${project.company ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Компания:</strong> <a href="https://${project.company}" target="_blank" class="project-detail-link hover:underline">${project.company}</a></p>` : ''}
+                         ${project.details ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Детали:</strong> ${project.details}</p>` : ''}
+        ${project.status ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Статус:</strong> ${project.status}</p>` : ''}
                     </div>
                 </div>
 
