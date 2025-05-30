@@ -86,15 +86,6 @@
             background-color: #38a169; /* Темно-зеленый для тегов жанров */
             color: #edf2f7; /* Светлый текст */
         }
-        .status-badge {
-    @apply px-3 py-1 rounded-full text-xs font-medium;
-}
-.status-live {
-    @apply bg-green-500 text-white;
-}
-.status-dev {
-    @apply bg-yellow-500 text-gray-900;
-}
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
@@ -145,9 +136,7 @@
                 skills: ['C#', 'Unity'],
                 demo: 'https://play.google.com/store/apps/details?id=com.sevenskillssoft.rollingarmor',
                 screenshot: '/screenshots/rolling-armor/rolling-armor.jpg',
-                tags: [ 'android', 'ios', 'casual','c#', 'unity','3D'],
-                 technical_notes: 'Паттерн "Компонент", антипаттерн "Синглтон", оптимизация под мобильные устройства',
-                 status: 'Вышла'
+                tags: [ 'android', 'ios', 'casual','c#', 'unity','3D']
             },
             {
                 id: 'phantom-recoil',
@@ -335,12 +324,10 @@
         <div class="md:w-2/3">
             <h2 class="text-2xl font-bold text-gray-100 mb-2">${project.title}</h2>
             <p class="text-gray-400 mb-4">${project.about.split('. ')[0]}.</p>
-
-
-<div class="flex flex-wrap gap-2 mb-4">
-    ${project.platforms.map(p => `<span class="platform-tag px-2 py-1 text-xs font-medium rounded-full">${p}</span>`).join('')}
-    ${project.genre.map(g => `<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
-</div>
+            <div class="flex flex-wrap gap-2 mb-4">
+                ${project.platforms.map(p => `<span class="platform-tag px-2 py-1 text-xs font-medium rounded-full">${p}</span>`).join('')}
+                ${project.genre.map(g => `<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
+            </div>
             <button class="view-details-button mt-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
                 Подробнее
             </button>
@@ -397,26 +384,6 @@
                 <h3 class="section-title">О проекте</h3>
                 <p class="project-detail-text leading-relaxed mb-6">${project.about}</p>
 
-<!-- Статус -->
-${project.status ? `
-    <div class="mb-4">
-        <span class="font-semibold">Статус:</span>
-        <span class="ml-2 px-3 py-1 rounded-full text-xs font-medium 
-            ${project.status === 'Вышла' 
-                ? 'bg-green-500 text-white' 
-                : 'bg-yellow-500 text-gray-900'}">
-            ${project.status}
-        </span>
-    </div>
-` : ''}
-
-<!-- Технические нюансы -->
-${project.technical_notes ? `
-    <div class="mb-4">
-        <span class="font-semibold">Детали:</span>
-        <p class="text-gray-400 mt-1">${project.technical_notes}</p>
-    </div>
-` : ''}
                 <h3 class="section-title">Навыки и технологии</h3>
                 <div class="flex flex-wrap gap-2 mb-6">
                     ${project.skills.map(skill => `<span class="skill-tag px-3 py-1 text-sm font-medium rounded-full">${skill}</span>`).join('')}
