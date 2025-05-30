@@ -136,7 +136,9 @@
                 skills: ['C#', 'Unity'],
                 demo: 'https://play.google.com/store/apps/details?id=com.sevenskillssoft.rollingarmor',
                 screenshot: '/screenshots/rolling-armor/rolling-armor.jpg',
-                tags: [ 'android', 'ios', 'casual','c#', 'unity','3D']
+                tags: [ 'android', 'ios', 'casual','c#', 'unity','3D'],
+                  details: 'Использована ECS архитектура для оптимизации производительности',
+    status: 'Релиз'
             },
             {
                 id: 'phantom-recoil',
@@ -374,6 +376,9 @@
                         <p class="project-detail-text mb-2"><strong class="font-semibold">Жанр:</strong> ${project.genre.join(', ')}</p>
                         ${project.setting ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Сеттинг:</strong> ${project.setting}</p>` : ''}
                         ${project.audience ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Аудитория:</strong> ${project.audience}</p>` : ''}
+                         ${project.details ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Детали:</strong> ${project.details}</p>` : ''}
+        ${project.status ? `<p class="project-detail-text mb-2"><strong class="font-semibold">Статус:</strong> ${project.status}</p>` : ''}
+    
                     </div>
                     <div>
                         <p class="project-detail-text mb-2"><strong class="font-semibold">Роль:</strong> ${project.role}</p>
