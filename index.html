@@ -339,6 +339,7 @@
           projectCard.className = 'project-card p-6 rounded-xl shadow-md border border-gray-700 hover:border-blue-500 transform hover:-translate-y-1';
           projectCard.dataset.id = project.id;
           projectCard.dataset.tags = project.tags.join(' '); // Добавляем теги как атрибут данных
+	projectCard.style.cursor = 'pointer'; 
           projectCard.innerHTML = `
     
 						<div class="flex flex-col md:flex-row gap-6">
@@ -353,9 +354,7 @@
 									<span class="genre-tag px-2 py-1 text-xs font-medium rounded-full">${g}</span>`).join('')}
             
 								</div>
-								<button class="view-details-button mt-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
-                Подробнее
-            </button>
+								
 							</div>
 							<!-- Правая колонка с превью -->
 							<div class="md:w-1/3 flex items-center">
@@ -367,16 +366,15 @@
 								</div>
 							</div>
 `;
+		 // Обработчик клика на карточку
+    projectCard.addEventListener('click', (event) => {
+      
+        window.location.hash = project.id;
+      
+    });
           projectListContainer.appendChild(projectCard);
         });
-        // Добавляем слушатели событий для кнопок "Подробнее"
-        document.querySelectorAll('.view-details-button').forEach(button => {
-          button.addEventListener('click', (event) => {
-            const projectId = event.target.closest('.project-card').dataset.id;
-            window.location.hash = projectId; // Изменяем хеш URL
-          });
-        });
-      }
+       
       // Отображает детальный просмотр проекта
       function renderProjectDetail(projectId) {
         const project = projectsData.find(p => p.id === projectId);
