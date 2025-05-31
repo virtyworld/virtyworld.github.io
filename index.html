@@ -185,6 +185,7 @@
           genre: ["Казуальная", "Однопользовательская", "Гонки"],
           setting: "Вымышленное, Будущее",
           audience: "9+",
+          company: "SevenSkillsSoftware",
           role: "Полная разработка",
           about:
             "Rolling Armor - захватывающая гипер-казуальная игра о гонках на танках, где важны рефлексы и точность! Управляйте своим танком по сложной зигзагообразной траектории, соревнуясь с вражескими танками и уклоняясь от смертельных препятствий. Уничтожайте вражеские башни, собирайте мощные бустеры и улучшайте свой танк, чтобы стать непобедимым",
@@ -201,6 +202,7 @@
           platforms: ["Android", "iOS"],
           genre: ["Экшен", "Шутер", "Казуальная", "Однопользовательская", "Зомби"],
           setting: "Вымышленное, Мистика, Мрачная атмосфера, 20-й век",
+          company: "SevenSkillsSoftware",
           audience: "9+",
           role: "Полная разработка",
           about:
@@ -218,6 +220,7 @@
           platforms: ["Android", "iOS"],
           genre: ["Казуальная", "Гиперказуальная", "Однопользовательская", "Гонка"],
           setting: "Настоящее",
+          company: "SevenSkillsSoftware",
           audience: "9+",
           role: "Полная разработка",
           about:
@@ -235,6 +238,7 @@
           platforms: ["Android", "iOS"],
           genre: ["Казуальная", "Гиперказуальная", "Однопользовательская", "Спорт"],
           setting: "Настоящее",
+          company: "SevenSkillsSoftware",
           audience: "9+",
           role: "Полная разработка",
           about:
@@ -268,6 +272,7 @@
           title: "Конструктор Мебели",
           platforms: ["WebGL", "Android", "iOS", "Windows", "AR"],
           genre: ["Конструктор", "Визуализация"],
+          company: "Veon",
           audience: "9+",
           role: "Полная разработка",
           about:
@@ -309,32 +314,37 @@
           status: "Релиз",
         },
         {
-          id: "fantasy-td",
-          title: "2D Tower Defence",
+          id: "century-of-decline",
+          title: "Century of Decline",
           platforms: ["Android", "PC"],
-          genre: ["Мидкор", "Однопользовательская"],
+          genre: ["Мидкор", "Однопользовательская", "Стратегия", "Tower Defence"],
           setting: "Фэнтези-средневековье",
           audience: "9+",
           role: "Полная разработка",
           about:
-            "Игра в жанре Tower Defence в фэнтезийном мире. Стройте башни, защищайте королевство и сражайтесь с ордами врагов. Использована ECS-архитектура LeoECSLite.",
+            "Игра в жанре Tower Defence в фэнтезийном мире. Стройте башни, защищайте королевство и сражайтесь с ордами врагов. ",
           skills: ["C#", "Unity", "LeoECSLite", "2D графика и анимации"],
-          screenshot: "https://placehold.co/600x400/ccbbaa/ffffff?text=Fantasy+TD", // Placeholder image
-          tags: ["android", "pc", "c#", "unity", "LeoECSLite", "3D"],
+          screenshot: "/century-of-decline/Century-of-decline.jpg", // Placeholder image
+          tags: ["android", "pc", "c#", "unity", "LeoECSLite", "2D"],
+          details: "Использована ECS-архитектура LeoECSLite.",
+          status: "В разработке",
         },
         {
           id: "saigl",
-          title: "Saigl — 2D B&W Fantasy Runner",
-          platforms: ["Android", "iOS"],
+          title: "Saigl",
+          platforms: ["Android", "iOS", "PC"],
           genre: ["Runner"],
           setting: "Фэнтези",
           audience: "16+",
-          role: "Полная разработка",
+          role: "Главный разработчик",
           about:
             "Атмосферный раннер с философским подтекстом. Игроку предстоит выжить в мрачном мире и раскрыть тайну самой жестокой сущности.",
           skills: ["C#", "Unity", "Zenject", "URP"],
-          screenshot: "/screenshots/saigl/saigl.jpg", // Placeholder image
-          tags: ["android", "ios", "фэнтези", "c#", "unity", "zenject", "urp"],
+          screenshot: "/screenshots/saigl/saigl.jpg",
+          tags: ["android", "ios", "pc", "фэнтези", "c#", "unity", "zenject", "urp"],
+          details:
+            'Разработана с применением паттерна "Компонент" и антипаттерн синглтон, плагины: unitask, Zenject, URP',
+          status: "В разработке",
         },
         {
           id: "gofanz",
@@ -346,7 +356,7 @@
           about:
             "Мобильное приложение, сочетающее фэнтези-лигу, криптовалюту и метавселенную. Игроки создают аватара, участвуют в матчах и получают награды.",
           skills: ["C#", "Unity", "Zenject", "UniTask", "Git"],
-          screenshot: "https://placehold.co/600x400/bbaacc/ffffff?text=GoFanz", // Placeholder image
+          screenshot: "/screenshots/gofanz/gofanz.jpg",
           tags: [
             "android",
             "ios",
@@ -361,39 +371,36 @@
             "git",
             "разработка-экранов-и-логики-метавселенной",
           ],
+          details:
+            'Разработка двух экранов и функционала к ним с применением паттерна "Компонент", плагины: unitask, Zenject, URP',
+          status: "Релиз",
         },
         {
           id: "2048",
-          title: "2048 — Гиперказуальный проект",
+          title: "2048 ",
           platforms: ["Android"],
-          genre: ["Пазл", "Головоломка"],
+          genre: ["Пазл", "Головоломка", "Казуальная"],
           role: "Полная разработка",
           about: "Моя реализация классической игры 2048. Объединяйте плитки с одинаковыми числами, чтобы достичь 2048.",
-          skills: ["C#", "Unity", "2D UI", "Анимации", "Мобильная адаптация"],
-          screenshot: "https://placehold.co/600x400/ccddaa/ffffff?text=2048", // Placeholder image
-          tags: [
-            "android",
-            "пазл",
-            "головоломка",
-            "c#",
-            "unity",
-            "2d-ui",
-            "анимации",
-            "мобильная-адаптация",
-            "полная-разработка",
-          ],
+          skills: ["C#", "Unity"],
+          screenshot: "/screenshots/2048/2048.jpg", // Placeholder image
+          tags: ["android", "c#", "unity"],
+          details: 'Разработана с применением паттерна "Компонент" и антипаттерн синглтон',
+          status: "В разработке",
         },
         {
           id: "sticky-block",
-          title: "Sticky Block — Клон гиперказуальной игры Voodoo",
+          title: "Sticky Block ",
           platforms: ["Android"],
           genre: ["Гиперказуальная аркада"],
           role: "Полная разработка",
           about:
-            'Игра, в которой блоки "прилипают" друг к другу при столкновении. Сформируйте идеальную форму и отправьте её в цель, избегая препятствий.',
+            'Sticky Block — Клон гиперказуальной игры Voodoo. Игра, в которой блоки "прилипают" друг к другу при столкновении. Сформируйте идеальную форму и отправьте её в цель, избегая препятствий.',
           skills: ["C#", "Unity"],
           screenshot: "https://placehold.co/600x400/aaddcc/ffffff?text=Sticky+Block", // Placeholder image
-          tags: ["android", "гиперказуальная-аркада", "c#", "unity", "полная-разработка"],
+          tags: ["android", "c#", "unity"],
+          details: 'Разработана с применением паттерна "Компонент" и антипаттерн синглтон',
+          status: "В разработке",
         },
         {
           id: "hole-vs-colors",
@@ -406,6 +413,8 @@
           skills: ["C#", "Unity"],
           screenshot: "https://placehold.co/600x400/ddccaa/ffffff?text=Hole+vs+Colors", // Placeholder image
           tags: ["android", "аркада", "c#", "unity", "полная-разработка"],
+          details: 'Разработана с применением паттерна "Компонент" и антипаттерн синглтон',
+          status: "В разработке",
         },
       ];
       // Получаем ссылки на элементы DOM
