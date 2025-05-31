@@ -442,7 +442,7 @@
         projectListContainer.innerHTML = ""; // Очищаем контейнер
         if (filteredProjects.length === 0) {
           projectListContainer.innerHTML =
-            ' < p class = "text-center text-gray-400 text-lg" > Нет проектов, соответствующих выбранным тегам. < /p>';
+            ' <p class = "text-center text-gray-400 text-lg" > Нет проектов, соответствующих выбранным тегам. </p>';
           return;
         }
         filteredProjects.forEach((project) => {
@@ -498,7 +498,7 @@
       function renderProjectDetail(projectId) {
         const project = projectsData.find((p) => p.id === projectId);
         if (!project) {
-          projectDetailContent.innerHTML = ' < p class = "text-red-400" > Проект не найден. < /p>';
+          projectDetailContent.innerHTML = '<p class = "text-red-400"> Проект не найден. </p>';
           return;
         }
         projectDetailContent.innerHTML = `
